@@ -14,7 +14,7 @@ hparam:
     batch_size: 32
     optimizer: Adam
     lr: 0.001
-    epochs: 20
+    epochs: 3
 
   resize:
     width: 1320
