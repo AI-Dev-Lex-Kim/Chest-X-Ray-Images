@@ -11,14 +11,14 @@ exp_idx: 0
 hparam:
   train:
     seed: 42
-    batch_size: 32
+    batch_size: 128
     optimizer: Adam
     lr: 0.001
     epochs: 3
 
   resize:
-    width: 1320
-    height: 968
+    width: 224
+    height: 224
 
   models:
     resnet50:
