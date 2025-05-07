@@ -1,0 +1,38 @@
+project_root: "/content/drive/MyDrive/codeit/sprint_mission/mission6"
+
+data:
+  root: "/content/drive/MyDrive/codeit/sprint_mission/mission6/data"
+  train_dir: "${root}/train"
+  val_dir: "${root}/val"
+  test_dir: "${root}/test"
+
+exp_exp_idx: baseline
+
+hparam:
+  train:
+    seed: 42
+    batch_size: 32
+    optimizer: Adam
+    lr: 0.001
+    epochs: 20
+
+  resize:
+    width: 200
+    height: 200
+
+  models:
+    resnet50:
+      type: resnet50
+      pretrained: True
+      num_classes: 10
+      freeze_backbone: True
+
+    efficientnet_b0:
+      type: efficientnet_b0
+      pretrained: True
+      num_classes: 10
+      freeze_backbone: False
+
+    vit_base_patch16_244:
+      type: vit_base_patch16_244
+      pretrained: True
