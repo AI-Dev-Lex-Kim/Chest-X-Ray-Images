@@ -1,0 +1,29 @@
+project_root: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6"
+baseline_cfg: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/configs/baseline.yaml"
+
+data:
+  root: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/data"
+  test_dir: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/data/test"
+
+eval:
+  batch_size: 128
+  optimizer: Adam
+  lr: 0.001
+
+transform:
+  resize:
+    width: 224
+    height: 224
+  normalize:
+    mean: 0.4874
+    std: 0.2455
+
+models:
+  resnet50:
+    type: resnet50
+    pretrained: True
+    num_classes: 10
+    freeze_backbone: True
+
+checkpoints:
+  best_model_weight: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/checkpoints/best_model_weight.pth"
