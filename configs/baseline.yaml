@@ -1,12 +1,12 @@
-project_root: "/content/drive/MyDrive/codeit/sprint_mission/mission6"
+project_root: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6"
 
 data:
-  root: "/content/drive/MyDrive/codeit/sprint_mission/mission6/data"
-  train_dir: "${root}/train"
-  val_dir: "${root}/val"
-  test_dir: "${root}/test"
+  root: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/data"
+  train_dir: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/data/train"
+  val_dir: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/data/val"
+  test_dir: "/content/drive/Othercomputers/내 MacBook Air/Documents/ai_project/mission6/data/test"
 
-exp_exp_idx: baseline
+exp_idx: 0
 
 hparam:
   train:
@@ -17,8 +17,8 @@ hparam:
     epochs: 20
 
   resize:
-    width: 200
-    height: 200
+    width: 1024
+    height: 1024
 
   models:
     resnet50:
